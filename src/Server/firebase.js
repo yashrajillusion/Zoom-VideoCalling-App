@@ -10,8 +10,8 @@ export const dbRef = firebase;
 
 let firepadRef = firebase.database().ref();
 export let connectedRef = firebase.database().ref(".info/connected");
-// export const userName = prompt("What's your name?");
-export const userName = "Yash";
+export const userName = prompt("What's your name?");
+// export const userName = "Yash";
 const urlparams = new URLSearchParams(window.location.search);
 const roomId = urlparams.get("id");
 
