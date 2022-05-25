@@ -1,0 +1,143 @@
+.App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.main-cont {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #18181a;
+}
+.mainscreen {
+  width: 100%;
+  height: 91%;
+}
+.footer {
+  height: 8%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px;
+}
+.footer > div > button {
+  background: transparent;
+  border: none;
+}
+.footer span {
+  /* color: #f9f3ee; */
+  color: #8a8d90;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+svg {
+  color: #8a8d90;
+}
+.footer button,
+span {
+  cursor: pointer;
+}
+
+.participants {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  grid-gap: 20px;
+  height: 85vh;
+  padding: 10px;
+}
+
+.participants img {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+@media (max-width: 800px) {
+  .participants {
+    grid-template-columns: repeat(var(--grid-col-size), 1fr);
+    grid-template-rows: repeat(var(--grid-row-size), 1fr);
+  }
+}
+
+.video {
+  background-color: #353b48;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.participant {
+  background-color: #353b48;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  min-height: 200px;
+}
+
+.muted {
+  color: #fff;
+  right: 10px;
+  position: absolute;
+  top: 10px;
+  background: #353b48;
+  border-radius: 50%;
+  height: 22px;
+  width: 22px !important;
+}
+
+.hide {
+  display: none;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  font-size: 150px;
+  font-family: roboto, arial;
+  color: white;
+  text-align: center;
+  background: orange;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.name {
+  color: white;
+  bottom: 10px;
+  position: absolute;
+  left: 20px;
+}
+
+@media (max-width: 800px) {
+  .participant {
+    min-height: 0px;
+  }
+  .avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+  }
+}
+.card {
+  background: #3c4043;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
